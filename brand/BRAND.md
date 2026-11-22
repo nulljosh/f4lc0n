@@ -1,6 +1,9 @@
 # f4lc0n brand kit and design system
 
-A target with a keyhole at its centre: a range you shoot at, and the lock you are there to open.
+A target with a keyhole at its centre: the thing you aim at, and the lock you are there to open.
+
+## The name
+Always `f4lc0n`: lowercase, a 4 for the a, a 0 for the o. Never Falcon, Falken, F4lc0n or F4LC0N in running text. It is Falken from WarGames, the scientist who hid a backdoor in his machine and named it Joshua, spelled the way a hacker types it. The wordmark is the name in the system mono, bold: accent green on the dark terminal, text colour everywhere else.
 
 ## The mark
 One bold flat white glyph on an accent gradient tile. No text, no outline, no emblem.
@@ -26,8 +29,8 @@ The system font: `-apple-system, BlinkMacSystemFont, "SF Pro Text", Lato, "Helve
 
 ## Space and shape
 - Space on the 8 point grid: 4, 8, 12, 16, 24, 32, 48. Side margin 20. Reading column 680.
-- Radii: cards 28, grouped lists 20, controls fully round, icon 22 percent.
-- Controls are 48 points tall capsules, one height in a row. Focus is a 4 point ring at 30 percent accent.
+- Radii: square corners on buttons, terminals and the install block, because the subject is a terminal. Icon 22 percent.
+- Controls are 48 points tall, one height in a row. Focus is a 4 point ring at 30 percent accent.
 - Motion is 0.2 s ease and honours reduced motion.
 
 `tokens.css` holds the app's accent. Everything else comes from the shared token file.

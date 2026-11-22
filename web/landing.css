@@ -183,3 +183,6 @@ h3 { font-size: 28px; line-height: 32px; font-weight: 600; letter-spacing: -.02e
 @media (max-width: 720px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 .install { max-width: 560px; margin: var(--sp-6) auto 0; text-align: left; border: 1px solid var(--border); border-radius: 4px; background: var(--bg2); padding: var(--sp-4) var(--sp-5); font-size: 14px; line-height: 22px; overflow-x: auto; }
 .hero .label a { color: inherit; }
+
+/* The wordmark is the name in the system mono, bold (brand/BRAND.md) */
+.nav-brand span, .foot-brand b, .wm { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-weight: 700; letter-spacing: 0; }
