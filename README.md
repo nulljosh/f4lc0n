@@ -1,6 +1,6 @@
 # f4lc0n
 
-<img src="icon.svg" width="80" height="80" alt="f4lc0n icon">
+<img src="web/icon.svg" width="80" height="80" alt="f4lc0n icon">
 
 ![version](https://img.shields.io/badge/version-v0.1.0-green) ![license](https://img.shields.io/badge/license-Apache_2.0-green)
 
