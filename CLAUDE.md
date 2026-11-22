@@ -10,7 +10,7 @@ A pentesting dojo that runs entirely on this Mac. No VM, no Docker. Public, live
 - `web/` — the landing, `brand/` — the kit, `docs/` — walkthrough, whitepaper, security, contributing
 
 ## Rules for any agent here
-- `RULES.md` is binding. Target is `127.0.0.1` or a listed training platform, nothing else.
+- `docs/RULES.md` is binding. Target is `127.0.0.1` or a listed training platform, nothing else.
 - Never remove the loopback pin in `run-juiceshop.sh`. Juice Shop is broken on purpose.
 - Keep docs current: a solve updates `*/progress.md` and `docs/WALKTHROUGH.md`, and new terminal
   output on the landing is recaptured, never mocked.

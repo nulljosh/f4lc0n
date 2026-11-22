@@ -2,7 +2,7 @@
 
 Plain-English notes on each thing the benchmark breaks and *why* it works. Do the challenge yourself
 first, then read the matching note. Every target here is local: Juice Shop on `127.0.0.1:3000` or a
-binary in this repo. See [../RULES.md](../RULES.md).
+binary in this repo. See [RULES.md](RULES.md).
 
 The golden rule under all of it: the app trusts input it shouldn't. Every hack below is one version of
 that sentence.

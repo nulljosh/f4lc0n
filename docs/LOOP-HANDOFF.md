@@ -4,7 +4,7 @@
 
 The loop works through f4lc0n's open items one at a time: pentest solves against Juice Shop, reverse engineering on the C crackmes, LeetCode problems, and the benchmark that scores them. Each tick takes the next item, does the real solve against the real target, scores it in `bench/bench.py`, updates the matching `progress.md` and `docs/WALKTHROUGH.md`, then commits and pushes.
 
-RULES.md binds it. Targets are 127.0.0.1 or a listed training platform, nothing else. The loopback pin in `pentest/run-juiceshop.sh` stays.
+docs/RULES.md binds it. Targets are 127.0.0.1 or a listed training platform, nothing else. The loopback pin in `pentest/run-juiceshop.sh` stays.
 
 ## Where things stand
 

@@ -23,7 +23,7 @@ stored XOR'd, so `strings` finds nothing and the solver undoes the XOR.
 ## Scope
 
 Every request points at `127.0.0.1` or a local binary, and nothing else. The solvers stay off the
-reviews/marsdb endpoints because malformed input there can crash Juice Shop. See [../RULES.md](../RULES.md).
+reviews/marsdb endpoints because malformed input there can crash Juice Shop. See [../docs/RULES.md](../docs/RULES.md).
 
 ## Adding a challenge
 

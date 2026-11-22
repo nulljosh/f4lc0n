@@ -58,7 +58,7 @@ that's the whole exercise. Solutions are in `re/solutions.md` (spoilers). Yes, t
 ## Rules
 Only attack Juice Shop on localhost, the crackmes in this repo, and platforms that invite it. Never point these
 techniques at anything you don't own or don't have written permission to test. The full rules of engagement are in
-[RULES.md](RULES.md). Read them first.
+[RULES.md](docs/RULES.md). Read them first.
 
 ## Architecture
 

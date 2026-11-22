@@ -4,7 +4,7 @@
 Pentest track hits Juice Shop on 127.0.0.1:3000, then confirms each win against Juice Shop's
 own /api/Challenges scoreboard, so a solve counts only when the app itself marks it solved, not
 because a payload returned 200. RE track extracts each crackme's secret and checks the binary
-accepts it. Nothing here points anywhere but localhost and this repo; see ../RULES.md.
+accepts it. Nothing here points anywhere but localhost and this repo; see ../docs/RULES.md.
 
 usage: python3 -I bench/bench.py            # both tracks
        python3 -I bench/bench.py --pentest  # one track
