@@ -18,8 +18,6 @@ docs/RULES.md binds it. Targets are 127.0.0.1 or a listed training platform, not
 
 ## Next, in order
 
-- Restyle the landing to match plank (site/) and keyrate (web/), asked 2026-11-22; held because the 7-day meter was at 96%.
-- Add f4lc0n.jaybulb.com in the Cloudflare dashboard (Pages project hackrange > Custom domains), then flip canonical, OG, sitemap, robots, README and the GitHub homepage to it.
 1. Cut v1.0.0. It is a major, so Joshua says yes first.
 2. Add CI that runs the benchmark with `--re --leetcode` on every push.
 3. Two harder LeetCode problems: Trapping Rain Water and LRU Cache.

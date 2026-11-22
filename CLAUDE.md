@@ -17,7 +17,7 @@ A pentesting dojo that runs entirely on this Mac. No VM, no Docker. Public, live
 - Benchmark solvers stay off the reviews/marsdb endpoints, which crash the target on bad input.
 
 ## Deploy
-`env -u CLOUDFLARE_API_TOKEN npx wrangler pages deploy web --project-name hackrange`. A push deploys nothing. Still on the old name on purpose: the Pages project `hackrange` and hackrange.jaybulb.com, which keeps serving for old links.
+`env -u CLOUDFLARE_API_TOKEN npx wrangler pages deploy web --project-name hackrange`. A push deploys nothing. The Pages project is still named `hackrange` on purpose; the site is f4lc0n.jaybulb.com.
 
 ## The loop
 
