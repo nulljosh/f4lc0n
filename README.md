@@ -1,8 +1,10 @@
-<img src="icon.svg" width="80" height="80" alt="Hackrange icon">
+<img src="icon.svg" width="80" height="80" alt="f4lc0n icon">
 
 ![version](https://img.shields.io/badge/version-v0.1.0-green) ![license](https://img.shields.io/badge/license-Apache_2.0-green)
 
 Learn to break in on your own machine. Two tracks: attack a deliberately broken web shop and crack small binaries. Everything runs on your Mac, with no VM and no Docker.
+
+Named after Falken, the WarGames scientist who hid a backdoor in his machine and named it Joshua. Formerly Hackrange.
 
 [hackrange.jaybulb.com](https://hackrange.jaybulb.com)
 

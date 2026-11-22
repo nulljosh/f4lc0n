@@ -1,10 +1,10 @@
-# Contributing to hackrange
+# Contributing to f4lc0n
 
 ## Setup
 
 ```
-git clone https://github.com/nulljosh/hackrange.git
-cd hackrange
+git clone https://github.com/nulljosh/f4lc0n.git
+cd f4lc0n
 ```
 
 ## Test

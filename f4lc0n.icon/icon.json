@@ -24,11 +24,11 @@
         {
           "glass": false,
           "image-name": "glyph.png",
-          "name": "Hackrange"
+          "name": "f4lc0n"
         }
       ],
       "lighting": "individual",
-      "name": "Hackrange",
+      "name": "f4lc0n",
       "shadow": {
         "kind": "neutral",
         "opacity": 0.3

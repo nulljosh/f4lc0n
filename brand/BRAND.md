@@ -1,11 +1,11 @@
-# Hackrange brand kit and design system
+# f4lc0n brand kit and design system
 
 A target with a keyhole at its centre: a range you shoot at, and the lock you are there to open.
 
 ## The mark
 One bold flat white glyph on an accent gradient tile. No text, no outline, no emblem.
 
-- `../Hackrange.icon` is the source of truth (Icon Composer). Light and dark fills are set in it.
+- `../f4lc0n.icon` is the source of truth (Icon Composer). Light and dark fills are set in it.
 - `../icon.svg` is the flat copy for READMEs (shown at 80 px). `icon-1024.png` is the App Store icon, no alpha.
 - `mark.svg` is the glyph alone in `currentColor` for your own background.
 - Clear space equal to the width of the glyph's thickest stroke. Smallest size 16 px.

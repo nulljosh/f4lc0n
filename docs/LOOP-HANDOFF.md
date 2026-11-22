@@ -1,17 +1,17 @@
-# Hackrange loop handoff (2026-11-07, morning)
+# f4lc0n loop handoff (2026-11-07, morning)
 
 ## What the loop is
 
-The loop works through Hackrange's open items one at a time: pentest solves against Juice Shop, reverse engineering on the C crackmes, LeetCode problems, and the benchmark that scores them. Each tick takes the next item, does the real solve against the real target, scores it in `bench/bench.py`, updates the matching `progress.md` and `docs/WALKTHROUGH.md`, then commits and pushes.
+The loop works through f4lc0n's open items one at a time: pentest solves against Juice Shop, reverse engineering on the C crackmes, LeetCode problems, and the benchmark that scores them. Each tick takes the next item, does the real solve against the real target, scores it in `bench/bench.py`, updates the matching `progress.md` and `docs/WALKTHROUGH.md`, then commits and pushes.
 
 RULES.md binds it. Targets are 127.0.0.1 or a listed training platform, nothing else. The loopback pin in `pentest/run-juiceshop.sh` stays.
 
 ## Where things stand
 
-- Public repo nulljosh/hackrange under Apache 2.0, with a v0.1.0 release on GitHub.
+- Public repo nulljosh/f4lc0n under Apache 2.0, with a v0.1.0 release on GitHub.
 - Hero terminal animation (b8ce626) types out a real pentest session and loops. The visibility fix (59cf6eb) centers and brightens it. The contrast follow-up (a5abe1a) takes the session text to full opacity in a brighter green and lightens the scrim behind the copy; it is deployed to Cloudflare Pages.
 - Cache-bust is shipped: the CSS and JS links in web/index.html carry a version query (?v=20261107a), and the hero renders live in Joshua's browser. The hero is fully done, confirmed by Joshua.
-- Landing is live at hackrange.jaybulb.com (and hackrange.pages.dev), deployed with `env -u CLOUDFLARE_API_TOKEN npx wrangler pages deploy web --project-name hackrange`. A push deploys nothing.
+- Landing is live at f4lc0n.jaybulb.com (and hackrange.pages.dev), deployed with `env -u CLOUDFLARE_API_TOKEN npx wrangler pages deploy web --project-name hackrange`. A push deploys nothing.
 - Benchmark 19/19: pentest 9/9, reverse engineering 2/2, LeetCode 8/8. Every pentest solve is checked against Juice Shop's own `/api/Challenges` scoreboard.
 - crackme2 is now XOR-obfuscated, so `strings` finds nothing in it. Crackme binaries are gitignored; rebuild with `re/build.sh`.
 - Docs: SECURITY, WHITEPAPER and CONTRIBUTING live in `docs/`. AGENTS.md is gone and CLAUDE.md is short.

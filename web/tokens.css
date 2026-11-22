@@ -1,4 +1,4 @@
-/* Hackrange design tokens, the house system with one accent of its own. Everything sits on an 8 point grid. Light first, dark follows the system. */
+/* f4lc0n design tokens, the house system with one accent of its own. Everything sits on an 8 point grid. Light first, dark follows the system. */
 :root {
   --accent: #0a7a1f;
   --accent-light: #35d62c;   /* icon gradient top */

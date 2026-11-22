@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Hackrange benchmark: run real solves against the local dojo and score them honestly.
+"""f4lc0n benchmark: run real solves against the local dojo and score them honestly.
 
 Pentest track hits Juice Shop on 127.0.0.1:3000, then confirms each win against Juice Shop's
 own /api/Challenges scoreboard, so a solve counts only when the app itself marks it solved, not
@@ -218,7 +218,7 @@ def table(title, rows):
 def main():
     args = sys.argv[1:]
     both = not args or ("--pentest" not in args and "--re" not in args)
-    print("Hackrange benchmark")
+    print("f4lc0n benchmark")
     tw = tt = 0
     if both or "--pentest" in args:
         w, t = table("Pentest  (OWASP Juice Shop, 127.0.0.1)", run_pentest())
