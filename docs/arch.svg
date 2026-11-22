@@ -1,10 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="640" height="300" viewBox="0 0 640 300"><style>
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="304" viewBox="0 -2 640 304"><style>
   text { font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif; fill: #1d1d1f; font-size: 12px; }
   .t { font-weight: 700; font-size: 13px; } .s { fill: #6e6e73; font-size: 11px; }
   .box { fill: #f5f5f7; stroke: #d2d2d7; } .hot { fill: #e9f6eb; stroke: #0a7a1f; } .ln { stroke: #8e8e93; stroke-width: 1.5; fill: none; }
   .pin { fill: #0a7a1f; font-size: 11px; font-weight: 600; }
-  @media (prefers-color-scheme: dark) { text { fill: #f5f5f7; } .s { fill: #98989d; } .box { fill: #1c1c1e; stroke: #3a3a3c; } .hot { fill: #0d2a12; stroke: #35d62c; } .ln { stroke: #636366; } .pin { fill: #35d62c; } }
 </style>
+<rect width="640" height="300" rx="14" fill="#ffffff"/>
 <rect class="box" x="220" y="8" width="200" height="48" rx="10"/><text class="t" x="320" y="29" text-anchor="middle">You, in Terminal</text><text class="s" x="320" y="45" text-anchor="middle">this Mac, no VM, no Docker</text>
 <path class="ln" d="M320 56 V76 M106 76 H534 M106 76 V96 M320 76 V96 M534 76 V96"/>
 <rect class="box" x="16" y="96" width="180" height="48" rx="10"/><text class="t" x="106" y="117" text-anchor="middle">pentest/</text><text class="s" x="106" y="133" text-anchor="middle">run-juiceshop.sh</text>
