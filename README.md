@@ -62,4 +62,4 @@ techniques at anything you don't own or don't have written permission to test. T
 
 ## Architecture
 
-<img src="docs/architecture.svg" width="600">
+<img src="docs/arch.svg" width="640">
