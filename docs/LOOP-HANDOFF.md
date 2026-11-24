@@ -1,30 +1,32 @@
-# f4lc0n loop handoff (2026-11-07, morning)
+# f4lc0n loop handoff (2026-11-24)
 
 ## What the loop is
 
-The loop works through f4lc0n's open items one at a time: pentest solves against Juice Shop, reverse engineering on the C crackmes, LeetCode problems, and the benchmark that scores them. Each tick takes the next item, does the real solve against the real target, scores it in `bench/bench.py`, updates the matching `progress.md` and `docs/WALKTHROUGH.md`, then commits and pushes.
-
-docs/RULES.md binds it. Targets are 127.0.0.1 or a listed training platform, nothing else. The loopback pin in `pentest/run-juiceshop.sh` stays.
+The loop works `roadmap.md` top to bottom, one row per tick: build it, QA it, bump the minor version, commit, tag, push, and deploy if the landing changed. `docs/RULES.md` binds it — targets are 127.0.0.1 or a listed training platform, nothing else, and the loopback pin in `pentest/run-juiceshop.sh` stays. The guard in `bin/f4lc0n` enforces the same thing in code.
 
 ## Where things stand
 
-- Public repo nulljosh/f4lc0n under Apache 2.0, with a v0.1.0 release on GitHub.
-- Hero terminal animation (b8ce626) types out a real pentest session and loops. The visibility fix (59cf6eb) centers and brightens it. The contrast follow-up (a5abe1a) takes the session text to full opacity in a brighter green and lightens the scrim behind the copy; it is deployed to Cloudflare Pages.
-- Cache-bust is shipped: the CSS and JS links in web/index.html carry a version query (?v=20261107a), and the hero renders live in Joshua's browser. The hero is fully done, confirmed by Joshua.
-- Landing is live at f4lc0n.jaybulb.com (and hackrange.pages.dev), deployed with `env -u CLOUDFLARE_API_TOKEN npx wrangler pages deploy web --project-name hackrange`. A push deploys nothing.
-- Benchmark 19/19: pentest 9/9, reverse engineering 2/2, LeetCode 8/8. Every pentest solve is checked against Juice Shop's own `/api/Challenges` scoreboard.
-- crackme2 is now XOR-obfuscated, so `strings` finds nothing in it. Crackme binaries are gitignored; rebuild with `re/build.sh`.
-- Docs: SECURITY, WHITEPAPER and CONTRIBUTING live in `docs/`. AGENTS.md is gone and CLAUDE.md is short.
+- **v0.2.0 shipped.** `bin/f4lc0n` is the suite entrypoint: `doctor`, `range up|down|status`, `recon`, `score`. Every target runs through `guard()` first — loopback only, everything else refused (tested against public hosts and CIDR ranges).
+- Landing live at f4lc0n.jaybulb.com, showing v0.2.0.
+- Benchmark 19/19 (pentest 9, RE 2, LeetCode 8), each scored against Juice Shop's own `/api/Challenges`.
+- Whitepaper rewritten for the suite era.
 
-## Next, in order
+## Priority order (reordered 2026-11-24)
 
-1. Cut v1.0.0. It is a major, so Joshua says yes first.
-2. Add CI that runs the benchmark with `--re --leetcode` on every push.
-3. Two harder LeetCode problems: Trapping Rain Water and LRU Cache.
-4. More Juice Shop challenges, each scored by the benchmark.
+Guides and content first — they turn solves into learning. Suite plumbing reorganizes things that already work, so it comes after.
+
+1. **Guides G1–G4** — Juice Shop per-category walkthroughs, RE per-crackme, per-platform getting-started, "own box".
+2. **Content 7–9** — Trapping Rain Water + LRU Cache; more scored Juice Shop; two harder crackmes.
+3. **CI 10** — benchmark `--re --leetcode` on every push.
+4. **Suite plumbing 2–6** — `range` absorbs the script, `re` helper, `score` diff, guard-as-library + fuzz, `status` TUI last.
+5. **Landing L1–L4** — mobile nav, free/OSS signal, "what you'll build", apple-skill spacing pass.
+
+**On hold — needs Joshua:** row 6a `f4lc0n scope` allowlist. Build only via real HTB/THM VPN-interface detection, never a bare "I own this" checkbox (that trades the guard's technical guarantee for trust). Else skip.
+
+**v1.0.0** cuts when the guides are done and content is deep. Major — needs Joshua's yes.
 
 ## Restart prompt
 
 ```
-/loop restyle the f4lc0n landing to match plank and keyrate, then until the project is A+; stop at 98% weekly usage
+/loop work roadmap.md for f4lc0n top to bottom — guides (G1–G4) first, then content (7–9), then CI (10), then suite plumbing, then landing L1–L4. Allowlist 6a on hold. Ship each row as a minor version, QA before shipping, stop at 98% weekly usage or when the matrix is empty. v1.0 gated on Joshua's yes.
 ```
