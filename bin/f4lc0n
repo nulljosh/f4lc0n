@@ -1,0 +1,91 @@
+#!/usr/bin/env bash
+# f4lc0n — one command for the whole dojo.
+#
+# Every subcommand that takes a target runs it through guard() first. The rules
+# of engagement (docs/RULES.md) are enforced here in code: a target that isn't
+# loopback is refused before any tool runs. This is the "impenetrable" part —
+# the room stays locked whether or not you remember the rules.
+set -euo pipefail
+
+root="$(cd "$(dirname "$0")/.." && pwd)"
+me="$(basename "$0")"
+
+c_red=$'\033[31m'; c_grn=$'\033[32m'; c_dim=$'\033[2m'; c_off=$'\033[0m'
+die() { printf '%s%s%s\n' "$c_red" "$*" "$c_off" >&2; exit 1; }
+ok()  { printf '%s%s%s\n' "$c_grn" "$*" "$c_off"; }
+dim() { printf '%s%s%s\n' "$c_dim" "$*" "$c_off"; }
+
+# guard TARGET — allow only loopback. No hostnames, no ranges, no outside hosts.
+guard() {
+  local t="${1:-}"
+  [ -n "$t" ] || die "no target given. $me points at your own machine only."
+  case "$t" in
+    */*)        die "refusing a range ($t). One host at a time, loopback only. See docs/RULES.md." ;;
+    localhost|127.0.0.1|::1|\[::1\]) ;;
+    127.*)      ;;  # 127.0.0.0/8 is all loopback
+    *)          die "refusing target '$t'. f4lc0n only touches 127.0.0.1 / localhost. See docs/RULES.md." ;;
+  esac
+}
+
+need() { command -v "$1" >/dev/null 2>&1; }
+
+cmd_doctor() {
+  echo "f4lc0n doctor — checking the dojo can run"
+  local bad=0
+  for tool in nmap gobuster clang lldb otool node python3; do
+    if need "$tool"; then ok "  ok   $tool"; else printf '%s  MISS %s%s\n' "$c_red" "$tool" "$c_off"; bad=1; fi
+  done
+  dim "  nmap/gobuster: brew install nmap gobuster"
+  dim "  clang/lldb/otool: xcode-select --install"
+  [ "$bad" -eq 0 ] && ok "all set." || die "some tools are missing (see above)."
+}
+
+cmd_range() {
+  case "${1:-status}" in
+    up)     exec "$root/pentest/run-juiceshop.sh" ;;
+    down)   local pids; pids=$(lsof -nP -iTCP:3000 -sTCP:LISTEN -t 2>/dev/null || true)
+            [ -n "$pids" ] && { kill $pids && ok "stopped Juice Shop ($pids)"; } || dim "nothing listening on 3000" ;;
+    status) if lsof -nP -iTCP:3000 -sTCP:LISTEN 2>/dev/null | grep -q 127.0.0.1; then
+              ok "Juice Shop up, pinned to 127.0.0.1"
+            elif lsof -nP -iTCP:3000 -sTCP:LISTEN 2>/dev/null | grep -q .; then
+              die "something on :3000 is NOT bound to loopback — stop it."
+            else dim "Juice Shop down"; fi ;;
+    *)      die "usage: $me range up|down|status" ;;
+  esac
+}
+
+cmd_recon() {
+  local t="${1:-127.0.0.1}"
+  guard "$t"
+  need nmap || die "nmap not found — brew install nmap"
+  ok "recon on $t (loopback only)"
+  nmap -sV "$t"
+  if need gobuster; then
+    dim "next: gobuster dir -u http://$t:3000 -w <wordlist>"
+  fi
+}
+
+cmd_score() { exec python3 -I "$root/bench/bench.py" "$@"; }
+
+usage() {
+  cat <<EOF
+$me — the f4lc0n dojo, one command. Everything stays on your machine.
+
+  $me doctor              check the tools the dojo needs
+  $me range up|down|status  run / stop / check Juice Shop (pinned to 127.0.0.1)
+  $me recon [127.0.0.1]   service scan, loopback only
+  $me score [args]        run the benchmark (bench/bench.py)
+  $me help                this
+
+Targets are 127.0.0.1 / localhost only. Anything else is refused. docs/RULES.md.
+EOF
+}
+
+case "${1:-help}" in
+  doctor) shift; cmd_doctor "$@" ;;
+  range)  shift; cmd_range "$@" ;;
+  recon)  shift; cmd_recon "$@" ;;
+  score)  shift; cmd_score "$@" ;;
+  help|-h|--help) usage ;;
+  *) usage; exit 1 ;;
+esac
