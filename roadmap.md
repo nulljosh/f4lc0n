@@ -14,6 +14,16 @@ Each row is one minor version: build it, QA it, bump the version, commit, tag, p
 | 4 | `f4lc0n status` TUI — progress across all tracks from the `progress.md` files | M | todo |
 | 5 | `f4lc0n score` wraps `bench/bench.py`, prints the scoreboard diff | S | todo |
 | 6 | Shared guard as a library every subcommand imports; fuzz it with bad targets in CI | S | todo |
+| 6a | `f4lc0n scope add/list/rm` — authorization allowlist. Loopback always on; register a host only with an "I own this" / platform attestation; guard reads the allowlist, everything off it still refused. Opens the *authorized* scopes (owned boxes, HTB/THM/picoCTF assigned targets), never arbitrary hosts. | M | todo |
+
+## Guides (one per supported target)
+
+| # | Row | Size | Status |
+|---|-----|------|--------|
+| G1 | Juice Shop — a walkthrough per challenge category (SQLi, XSS, broken auth, IDOR…), each scored | L | todo |
+| G2 | Reverse engineering — step-by-step per crackme (lldb breakpoints, reading registers) | M | todo |
+| G3 | Getting-started guide per training platform in scope (HTB, THM, picoCTF, OverTheWire, PortSwigger) — how to register a box with `f4lc0n scope` and stay in bounds | M | todo |
+| G4 | "Own box" guide — spin up a target you own and point f4lc0n at it safely | S | todo |
 
 ## Content
 
