@@ -1,4 +1,4 @@
-// Footer band: f4lc0n's own things in a row (the target, a prompt, a lock, a key, a chip, a juice cup), engraved in plain 2D canvas.
+// Footer band: grouse's own things in a row (the target, a prompt, a lock, a key, a chip, a juice cup), engraved in plain 2D canvas.
 // Faint rules run across the band and thicken inside the glyphs, so they look cut into the page.
 // ponytail: was a WebGL shader with a drifting light; it rendered as a black box on iPhone, so it is static now.
 (function () {

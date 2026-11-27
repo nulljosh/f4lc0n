@@ -24,7 +24,7 @@
   if (board) {
     var ed = board.appendChild(el('div', 'ed')), bar = ed.appendChild(el('div', 'ed-bar'));
     bar.appendChild(el('i')); bar.appendChild(el('i')); bar.appendChild(el('i'));
-    bar.appendChild(el('b', '', '~/f4lc0n'));
+    bar.appendChild(el('b', '', '~/grouse'));
     var st = bar.appendChild(el('span', 'stages'));
     ['recon', 'exploit', 'crack', 'score'].forEach(function (s) { stages.push(st.appendChild(el('span', '', s))); });
     code = ed.appendChild(el('pre', 'code')); term = ed.appendChild(el('pre', 'ed-term'));

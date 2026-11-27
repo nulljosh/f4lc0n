@@ -1,4 +1,4 @@
-/* f4lc0n landing in the house layout: sticky nav, giant tight headlines, small caps labels, square buttons, one
+/* grouse landing in the house layout: sticky nav, giant tight headlines, small caps labels, square buttons, one
    full-bleed green band, ruled cells and an engraved footer band. Colours and type come from tokens.css. */
 :root {
   --band: #0a7a1f;
@@ -79,7 +79,7 @@ h3 { font-size: 28px; line-height: 32px; font-weight: 600; letter-spacing: -.02e
 .sec { padding: var(--sp-9) 0; }
 .body { color: var(--sub); margin: var(--sp-5) auto 0; max-width: 560px; }
 
-/* Footer: brand and link columns, the engraved band of f4lc0n tools, one fine line */
+/* Footer: brand and link columns, the engraved band of grouse tools, one fine line */
 .foot { text-align: center; padding: var(--sp-8) var(--sp-4) var(--sp-5); background: var(--bg); overflow: hidden; border-top: 1px solid var(--line); }
 .foot-top { max-width: var(--wrap); margin: 0 auto; padding: 0 var(--sp-4); display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--sp-7); text-align: left; }
 .foot-brand { display: grid; gap: var(--sp-2); align-content: start; }

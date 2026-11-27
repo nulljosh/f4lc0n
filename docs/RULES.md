@@ -1,6 +1,6 @@
 # Rules of engagement
 
-f4lc0n is a locked room. Everything in here is allowed inside the room. Nothing in here is allowed outside it. These rules bind you and any AI agent working in this repo.
+grouse is a locked room. Everything in here is allowed inside the room. Nothing in here is allowed outside it. These rules bind you and any AI agent working in this repo.
 
 ## The test
 

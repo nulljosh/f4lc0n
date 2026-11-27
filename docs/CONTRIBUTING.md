@@ -1,10 +1,10 @@
-# Contributing to f4lc0n
+# Contributing to grouse
 
 ## Setup
 
 ```
-git clone https://github.com/nulljosh/f4lc0n.git
-cd f4lc0n
+git clone https://github.com/nulljosh/grouse.git
+cd grouse
 ```
 
 ## Test

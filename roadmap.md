@@ -1,4 +1,4 @@
-# f4lc0n roadmap
+# grouse roadmap
 
 North star: a **focused** dojo, not a Kali-style kitchen sink. The edge is being small and actually
 used. The one differentiating feature is the **guard** — the rules of engagement enforced in code,
@@ -15,7 +15,7 @@ comes after. v1.0 = guides done and content deep, not "more tools."
 | G1 | Juice Shop — a walkthrough per challenge category (SQLi, XSS, broken auth, IDOR…), each scored | L | todo |
 | G2 | Reverse engineering — step-by-step per crackme (lldb breakpoints, reading registers) | M | todo |
 | G3 | Getting-started guide per training platform in scope (HTB, THM, picoCTF, OverTheWire, PortSwigger) | M | todo |
-| G4 | "Own box" guide — spin up a target you own and point f4lc0n at it safely | S | todo |
+| G4 | "Own box" guide — spin up a target you own and point grouse at it safely | S | todo |
 
 ## 2. Content — deepen the room
 
@@ -35,18 +35,18 @@ comes after. v1.0 = guides done and content deep, not "more tools."
 
 | # | Row | Size | Status |
 |---|-----|------|--------|
-| 1 | `f4lc0n` dispatcher + `guard` + `doctor`/`range`/`recon`/`score` | M | done v0.2.0 |
-| 2 | `f4lc0n range` absorbs `run-juiceshop.sh`, keeps the loopback pin | S | todo |
-| 3 | `f4lc0n re` wraps the crackme build + lldb/otool solve helper | M | todo |
-| 5 | `f4lc0n score` prints the scoreboard diff | S | todo |
+| 1 | `grouse` dispatcher + `guard` + `doctor`/`range`/`recon`/`score` | M | done v0.2.0 |
+| 2 | `grouse range` absorbs `run-juiceshop.sh`, keeps the loopback pin | S | todo |
+| 3 | `grouse re` wraps the crackme build + lldb/otool solve helper | M | todo |
+| 5 | `grouse score` prints the scoreboard diff | S | todo |
 | 6 | Shared guard as a library every subcommand imports; fuzz it with bad targets in CI | S | todo |
-| 4 | `f4lc0n status` TUI across tracks | M | novelty — do last |
+| 4 | `grouse status` TUI across tracks | M | novelty — do last |
 
 ## 5. On hold — decide before building
 
 | # | Row | Why it's held |
 |---|-----|---------------|
-| 6a | `f4lc0n scope` allowlist | Trades the guard's *technical* guarantee (loopback only, verifies nothing to trust) for a *trust* one (user attests ownership). Build ONLY via real signals — detect the HTB/THM VPN interface — never a bare "I own this" checkbox. Otherwise don't build it. |
+| 6a | `grouse scope` allowlist | Trades the guard's *technical* guarantee (loopback only, verifies nothing to trust) for a *trust* one (user attests ownership). Build ONLY via real signals — detect the HTB/THM VPN interface — never a bare "I own this" checkbox. Otherwise don't build it. |
 
 ## 6. Landing (/mobbin pass vs plank, keyrate, best-in-class dev landers)
 

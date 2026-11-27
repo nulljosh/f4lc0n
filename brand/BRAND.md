@@ -1,14 +1,14 @@
-# f4lc0n brand kit and design system
+# grouse brand kit and design system
 
 A target with a keyhole at its centre: the thing you aim at, and the lock you are there to open.
 
 ## The name
-Always `f4lc0n`: lowercase, a 4 for the a, a 0 for the o. Never Falcon, Falken, F4lc0n or F4LC0N in running text. It is Falken from WarGames, the scientist who hid a backdoor in his machine and named it Joshua, spelled the way a hacker types it. The wordmark is the name in the system mono, bold: accent green on the dark terminal, text colour everywhere else.
+Always `grouse`, lowercase. It is Grouse Mountain in Vancouver, home of the Grind training trail, and the bird falcons hunt. Formerly f4lc0n. The wordmark is the name in the system mono, bold: accent green on the dark terminal, text colour everywhere else.
 
 ## The mark
 One bold flat white glyph on an accent gradient tile. No text, no outline, no emblem.
 
-- `f4lc0n.icon` is the source of truth (Icon Composer). Light and dark fills are set in it.
+- `grouse.icon` is the source of truth (Icon Composer). Light and dark fills are set in it.
 - `../web/icon.svg` is the flat icon, also used by the README (shown at 80 px). `icon-1024.png` is the App Store icon, no alpha.
 - `mark.svg` is the glyph alone in `currentColor` for your own background.
 - Clear space equal to the width of the glyph's thickest stroke. Smallest size 16 px.

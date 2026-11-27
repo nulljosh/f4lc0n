@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
-<title>f4lc0n. Learn to break in on your own machine.</title>
+<title>grouse. Learn to break in on your own machine.</title>
 <meta name="description" content="A free pentesting dojo for your Mac. Attack a deliberately broken web shop and crack small binaries, on localhost, with no VM and no Docker.">
-<meta property="og:title" content="f4lc0n. Learn to break in on your own machine.">
+<meta property="og:title" content="grouse. Learn to break in on your own machine.">
 <meta property="og:description" content="A free pentesting dojo for your Mac. Attack a deliberately broken web shop and crack small binaries, on localhost, with no VM and no Docker.">
 <meta property="og:image" content="https://f4lc0n.jaybulb.com/og.png">
 <meta property="og:url" content="https://f4lc0n.jaybulb.com/">
@@ -31,9 +31,9 @@
     <a href="#how">How</a>
     <a href="#start">Start</a>
   </nav>
-  <a class="nav-brand" href="#top" aria-label="f4lc0n home"><img src="/icon.svg" alt="" width="28" height="28"><span>f4lc0n</span></a>
+  <a class="nav-brand" href="#top" aria-label="grouse home"><img src="/icon.svg" alt="" width="28" height="28"><span>grouse</span></a>
   <div class="nav-end">
-    <a class="nav-get" href="https://github.com/nulljosh/f4lc0n">GitHub</a>
+    <a class="nav-get" href="https://github.com/nulljosh/grouse">GitHub</a>
     <a class="btn btn-solid" href="#start">Install</a>
   </div>
 </header>
@@ -44,12 +44,12 @@
   <div class="backdrop" aria-hidden="true" inert><div class="ground" id="board"></div></div>
   <div class="sky" id="sky" aria-hidden="true" inert></div>
   <div class="wrap center hero-copy">
-    <p class="label">f4lc0n <a href="https://github.com/nulljosh/f4lc0n/releases">v0.2.0</a>, a pentesting dojo for your Mac</p>
+    <p class="label">grouse <a href="https://github.com/nulljosh/grouse/releases">v0.2.0</a>, a pentesting dojo for your Mac</p>
     <h1 class="hero-h1">Learn to break in on your own machine.</h1>
     <p class="lead">A broken web shop to attack and small binaries to crack. It all runs on localhost, with no VM and no Docker.</p>
     <div class="cta">
       <a class="btn btn-solid" href="#start">Start hacking</a>
-      <a class="btn btn-ghost" href="https://github.com/nulljosh/f4lc0n">Read the source</a>
+      <a class="btn btn-ghost" href="https://github.com/nulljosh/grouse">Read the source</a>
     </div>
     <p class="readout" aria-hidden="true"><span class="cmd" id="rCmd">nmap -sV 127.0.0.1</span><span class="said" id="rSaid"></span></p>
   </div>
@@ -61,7 +61,7 @@
     <h2>Find the bug yourself</h2>
     <p>Reading about SQL injection teaches you the word. Logging in as admin with one quote mark teaches you the bug.</p>
   </div>
-  <div class="facts reveal" aria-label="f4lc0n in numbers">
+  <div class="facts reveal" aria-label="grouse in numbers">
     <div class="fact"><b>19/19</b><span>benchmark solves, scored by the target itself</span></div>
     <div class="fact"><b>100+</b><span>scored challenges in the web shop</span></div>
     <div class="fact"><b>0</b><span>VMs or containers to set up</span></div>
@@ -94,7 +94,7 @@ token  eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9...
   </div>
   <div class="cells">
     <article class="cell reveal"><p class="label">Setup</p><h3>Nothing to install twice</h3><p>One script fetches Juice Shop. One script builds the crackmes. The debugger ships with Xcode.</p></article>
-    <article class="cell reveal"><p class="label">Safety</p><h3>Pinned to loopback</h3><p>Juice Shop normally listens on your whole network. f4lc0n holds it to 127.0.0.1 or refuses to start.</p></article>
+    <article class="cell reveal"><p class="label">Safety</p><h3>Pinned to loopback</h3><p>Juice Shop normally listens on your whole network. grouse holds it to 127.0.0.1 or refuses to start.</p></article>
     <article class="cell reveal"><p class="label">Progress</p><h3>Plain text</h3><p>Each track keeps a checklist and a spoiler file. Tick things off as you go. Peek only when you are stuck.</p></article>
   </div>
 </section>
@@ -103,7 +103,7 @@ token  eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9...
   <div class="wrap center">
     <p class="label reveal">How it works</p>
     <h2 class="reveal">Four steps, one machine</h2>
-    <p class="body reveal">Every solve follows the same path, and the <a href="https://github.com/nulljosh/f4lc0n/blob/main/docs/WALKTHROUGH.md">walkthrough</a> shows each one in full.</p>
+    <p class="body reveal">Every solve follows the same path, and the <a href="https://github.com/nulljosh/grouse/blob/main/docs/WALKTHROUGH.md">walkthrough</a> shows each one in full.</p>
     <div class="steps reveal">
       <div class="step"><b>Start</b><span>One script runs the shop on loopback. One builds the crackmes.</span></div>
       <div class="step"><b>Find</b><span>Devtools, gobuster and otool show you where the weak spot is.</span></div>
@@ -118,26 +118,26 @@ token  eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9...
     <p class="label reveal">Start</p>
     <h2 class="reveal">Five commands in</h2>
     <p class="body reveal">Clone it, start the shop, then open the score board at localhost:3000/#/score-board. Free and open source; needs a Mac with the Xcode command line tools and Node.</p>
-    <pre class="install reveal">git clone https://github.com/nulljosh/f4lc0n
-cd f4lc0n
+    <pre class="install reveal">git clone https://github.com/nulljosh/grouse
+cd grouse
 ./pentest/run-juiceshop.sh    # the web track
 ./re/build.sh                 # the crackmes
 python3 -I bench/bench.py     # score your solves</pre>
     <h2 class="rules reveal">One rule</h2>
-    <p class="body reveal">Only attack what you own or have written permission to test. Everything here stays on your machine. Pointing these skills at someone else's system without permission is a crime, and it is not what this is for. <a href="https://github.com/nulljosh/f4lc0n/blob/main/docs/RULES.md">Read the rules</a>.</p>
+    <p class="body reveal">Only attack what you own or have written permission to test. Everything here stays on your machine. Pointing these skills at someone else's system without permission is a crime, and it is not what this is for. <a href="https://github.com/nulljosh/grouse/blob/main/docs/RULES.md">Read the rules</a>.</p>
   </div>
 </section>
 
-<section class="faq" id="faq"><style>.faq{max-width:720px;margin:0 auto;padding:64px 20px}.faq h2{font-size:28px;line-height:1.2;font-weight:600;margin:0 0 20px}.faq details{border-top:1px solid color-mix(in srgb,currentColor 18%,transparent);padding:16px 0}.faq details:last-child{border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}.faq summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}.faq summary::-webkit-details-marker{display:none}.faq summary::after{content:"+";opacity:.6}.faq details[open] summary::after{content:"\2212"}.faq p{margin:12px 0 0;opacity:.75;line-height:1.5}</style><h2>FAQ</h2><details><summary>What is f4lc0n?</summary><p>A free pentesting dojo for your Mac. You attack a deliberately broken web shop and crack small binaries.</p></details><details><summary>Do I need a VM or Docker?</summary><p>No. Everything runs on localhost, so there is nothing to set up beyond the app.</p></details><details><summary>Is it safe to attack?</summary><p>Yes. The targets are broken on purpose and live only on your own machine.</p></details><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is f4lc0n?", "acceptedAnswer": {"@type": "Answer", "text": "A free pentesting dojo for your Mac. You attack a deliberately broken web shop and crack small binaries."}}, {"@type": "Question", "name": "Do I need a VM or Docker?", "acceptedAnswer": {"@type": "Answer", "text": "No. Everything runs on localhost, so there is nothing to set up beyond the app."}}, {"@type": "Question", "name": "Is it safe to attack?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The targets are broken on purpose and live only on your own machine."}}]}</script></section>
+<section class="faq" id="faq"><style>.faq{max-width:720px;margin:0 auto;padding:64px 20px}.faq h2{font-size:28px;line-height:1.2;font-weight:600;margin:0 0 20px}.faq details{border-top:1px solid color-mix(in srgb,currentColor 18%,transparent);padding:16px 0}.faq details:last-child{border-bottom:1px solid color-mix(in srgb,currentColor 18%,transparent)}.faq summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}.faq summary::-webkit-details-marker{display:none}.faq summary::after{content:"+";opacity:.6}.faq details[open] summary::after{content:"\2212"}.faq p{margin:12px 0 0;opacity:.75;line-height:1.5}</style><h2>FAQ</h2><details><summary>What is grouse?</summary><p>A free pentesting dojo for your Mac. You attack a deliberately broken web shop and crack small binaries.</p></details><details><summary>Do I need a VM or Docker?</summary><p>No. Everything runs on localhost, so there is nothing to set up beyond the app.</p></details><details><summary>Is it safe to attack?</summary><p>Yes. The targets are broken on purpose and live only on your own machine.</p></details><script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is grouse?", "acceptedAnswer": {"@type": "Answer", "text": "A free pentesting dojo for your Mac. You attack a deliberately broken web shop and crack small binaries."}}, {"@type": "Question", "name": "Do I need a VM or Docker?", "acceptedAnswer": {"@type": "Answer", "text": "No. Everything runs on localhost, so there is nothing to set up beyond the app."}}, {"@type": "Question", "name": "Is it safe to attack?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The targets are broken on purpose and live only on your own machine."}}]}</script></section>
 </main>
 
 <footer class="foot">
   <div class="foot-top">
-    <div class="foot-brand"><img src="/icon.svg" alt="" width="40" height="40"><b>f4lc0n</b><p>Learn to break in on your own machine.</p><p class="story">Named after Falken, the WarGames scientist who hid a backdoor in his machine and named it Joshua.</p></div>
+    <div class="foot-brand"><img src="/icon.svg" alt="" width="40" height="40"><b>grouse</b><p>Learn to break in on your own machine.</p><p class="story">Named after Grouse Mountain and its Grind training trail, and the bird falcons hunt.</p></div>
     <nav class="foot-cols" aria-label="Footer">
-      <div><p class="label">f4lc0n</p><a href="https://github.com/nulljosh/f4lc0n/releases">Releases</a><a href="https://github.com/nulljosh/f4lc0n/blob/main/docs/WALKTHROUGH.md">Walkthrough</a><a href="https://github.com/nulljosh/f4lc0n/blob/main/bench/README.md">Benchmark</a></div>
-      <div><p class="label">Developers</p><a href="https://github.com/nulljosh/f4lc0n">Source</a><a href="https://github.com/nulljosh/f4lc0n/blob/main/docs/WHITEPAPER.md">Whitepaper</a><a href="https://github.com/nulljosh/f4lc0n/blob/main/docs/RULES.md">Rules</a><a href="https://github.com/nulljosh/f4lc0n/blob/main/docs/SECURITY.md">Security</a></div>
-      <div><p class="label">More</p><a href="mailto:info@jaybulb.com?subject=f4lc0n">Feedback</a><a href="/brand/">Brand</a><a href="https://jaybulb.com">More projects</a><a href="#top">Back to top</a></div>
+      <div><p class="label">grouse</p><a href="https://github.com/nulljosh/grouse/releases">Releases</a><a href="https://github.com/nulljosh/grouse/blob/main/docs/WALKTHROUGH.md">Walkthrough</a><a href="https://github.com/nulljosh/grouse/blob/main/bench/README.md">Benchmark</a></div>
+      <div><p class="label">Developers</p><a href="https://github.com/nulljosh/grouse">Source</a><a href="https://github.com/nulljosh/grouse/blob/main/docs/WHITEPAPER.md">Whitepaper</a><a href="https://github.com/nulljosh/grouse/blob/main/docs/RULES.md">Rules</a><a href="https://github.com/nulljosh/grouse/blob/main/docs/SECURITY.md">Security</a></div>
+      <div><p class="label">More</p><a href="mailto:info@jaybulb.com?subject=grouse">Feedback</a><a href="/brand/">Brand</a><a href="https://jaybulb.com">More projects</a><a href="#top">Back to top</a></div>
     </nav>
   </div>
   <div class="word-band" aria-hidden="true"><canvas class="word-canvas"></canvas></div>

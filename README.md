@@ -1,12 +1,12 @@
-# f4lc0n
+# grouse
 
-<img src="web/icon.svg" width="80" height="80" alt="f4lc0n icon">
+<img src="web/icon.svg" width="80" height="80" alt="grouse icon">
 
 ![version](https://img.shields.io/badge/version-v0.2.0-green) ![license](https://img.shields.io/badge/license-Apache_2.0-green)
 
 Learn to break in on your own machine. Two tracks: attack a deliberately broken web shop and crack small binaries. Everything runs on your Mac, with no VM and no Docker.
 
-Named after Falken, the WarGames scientist who hid a backdoor in his machine and named it Joshua. Formerly Hackrange.
+Named after Grouse Mountain, the Vancouver peak with the Grind training trail, and the bird falcons hunt. Formerly f4lc0n, and before that Hackrange.
 
 <img src="docs/progress.svg" width="460">
 
@@ -17,10 +17,10 @@ first: anything that isn't `127.0.0.1` / `localhost` is refused before a tool fi
 of engagement are enforced in code, not just written down.
 
 ```
-bin/f4lc0n doctor              # are the tools installed?
-bin/f4lc0n range up|down|status  # run / stop / check Juice Shop (pinned to loopback)
-bin/f4lc0n recon 127.0.0.1     # service scan, loopback only
-bin/f4lc0n score               # run the benchmark
+bin/grouse doctor              # are the tools installed?
+bin/grouse range up|down|status  # run / stop / check Juice Shop (pinned to loopback)
+bin/grouse recon 127.0.0.1     # service scan, loopback only
+bin/grouse score               # run the benchmark
 ```
 
 ## Setup

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# f4lc0n — one command for the whole dojo.
+# grouse — one command for the whole dojo.
 #
 # Every subcommand that takes a target runs it through guard() first. The rules
 # of engagement (docs/RULES.md) are enforced here in code: a target that isn't
@@ -23,14 +23,14 @@ guard() {
     */*)        die "refusing a range ($t). One host at a time, loopback only. See docs/RULES.md." ;;
     localhost|127.0.0.1|::1|\[::1\]) ;;
     127.*)      ;;  # 127.0.0.0/8 is all loopback
-    *)          die "refusing target '$t'. f4lc0n only touches 127.0.0.1 / localhost. See docs/RULES.md." ;;
+    *)          die "refusing target '$t'. grouse only touches 127.0.0.1 / localhost. See docs/RULES.md." ;;
   esac
 }
 
 need() { command -v "$1" >/dev/null 2>&1; }
 
 cmd_doctor() {
-  echo "f4lc0n doctor — checking the dojo can run"
+  echo "grouse doctor — checking the dojo can run"
   local bad=0
   for tool in nmap gobuster clang lldb otool node python3; do
     if need "$tool"; then ok "  ok   $tool"; else printf '%s  MISS %s%s\n' "$c_red" "$tool" "$c_off"; bad=1; fi
@@ -69,7 +69,7 @@ cmd_score() { exec python3 -I "$root/bench/bench.py" "$@"; }
 
 usage() {
   cat <<EOF
-$me — the f4lc0n dojo, one command. Everything stays on your machine.
+$me — the grouse dojo, one command. Everything stays on your machine.
 
   $me doctor              check the tools the dojo needs
   $me range up|down|status  run / stop / check Juice Shop (pinned to 127.0.0.1)
