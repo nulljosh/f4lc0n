@@ -7,7 +7,7 @@ The loop works `roadmap.md` top to bottom, one row per tick: build it, QA it, bu
 ## Where things stand
 
 - **v0.2.0 shipped.** `bin/grouse` is the suite entrypoint: `doctor`, `range up|down|status`, `recon`, `score`. Every target runs through `guard()` first — loopback only, everything else refused (tested against public hosts and CIDR ranges).
-- Landing live at f4lc0n.jaybulb.com, showing v0.2.0.
+- Landing live at grouse.jaybulb.com, showing v0.2.0.
 - Benchmark 19/19 (pentest 9, RE 2, LeetCode 8), each scored against Juice Shop's own `/api/Challenges`.
 - Whitepaper rewritten for the suite era.
 

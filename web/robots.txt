@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://f4lc0n.jaybulb.com/sitemap.xml
+Sitemap: https://grouse.jaybulb.com/sitemap.xml

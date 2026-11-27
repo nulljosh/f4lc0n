@@ -1,6 +1,6 @@
 # grouse
 
-A pentesting dojo that runs entirely on this Mac. No VM, no Docker. Public, live at f4lc0n.jaybulb.com (grouse.jaybulb.com once the Pages domain is added).
+A pentesting dojo that runs entirely on this Mac. No VM, no Docker. Public, live at grouse.jaybulb.com.
 
 ## Layout
 - `pentest/` — OWASP Juice Shop on 127.0.0.1 (`run-juiceshop.sh`)
@@ -17,7 +17,7 @@ A pentesting dojo that runs entirely on this Mac. No VM, no Docker. Public, live
 - Benchmark solvers stay off the reviews/marsdb endpoints, which crash the target on bad input.
 
 ## Deploy
-`env -u CLOUDFLARE_API_TOKEN npx wrangler pages deploy web --project-name hackrange`. A push deploys nothing. The Pages project is still named `hackrange` on purpose; the site still serves from f4lc0n.jaybulb.com and hackrange.jaybulb.com until grouse.jaybulb.com is added to the Pages project.
+`env -u CLOUDFLARE_API_TOKEN npx wrangler pages deploy web --project-name hackrange`. A push deploys nothing. The Pages project is still named `hackrange` on purpose; the site is grouse.jaybulb.com; f4lc0n.jaybulb.com and hackrange.jaybulb.com keep serving.
 
 ## The loop
 
